@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <h1>
+        Comment Box
+    </h1>
+    <div id="postComment">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa blanditiis harum non nesciunt nemo. Amet eos dicta aperiam quisquam, ipsa, aliquam nisi ea ab temporibus, rem sunt illo labore a? Quis saepe facilis earum cupiditate ex. Fugit deserunt id dolorum ratione mollitia? Dolores, asperiores explicabo quibusdam eaque aperiam hic nesciunt.</p>
+
+        <p>Placeat magnam fugiat architecto ea! Velit, dignissimos quas ab rerum dolore voluptate quisquam pariatur ducimus, sapiente magni reiciendis quod est similique eum temporibus nihil nam aliquam amet vel obcaecati laboriosam accusantium fuga placeat. Tempore at vel mollitia, unde illo expedita. Mollitia animi officia amet vel, alias possimus earum expedita ipsa!</p>
+
+        <p>Sequi molestiae officiis, alias quos architecto fugit exercitationem accusantium repellendus delectus, cupiditate aspernatur aliquam inventore! Repudiandae voluptas eum sapiente beatae eaque doloribus quam quidem nesciunt magnam consequatur quibusdam ratione voluptatibus labore veniam eligendi repellendus, iure laboriosam inventore quod pariatur delectus tenetur? Mollitia voluptatibus ex, provident vitae laborum vero necessitatibus! Expedita!</p>
+    </div>
+    <div>
+        <textarea  name="" id="text-area" cols="50" rows="5"></textarea>
+        <br>
+        <button id="btn_submit">Post</button>
+    </div>
+
+    <script>
+
+        document.getElementById('btn_submit').addEventListener('click', function(){
+            // console.log('clicked');
+            const inputfield = document.getElementById('text-area');
+            const inputText = inputfield.value;
+            inputfield.value = '';
+            // console.log(inputText);
+            const commentoSection = document.getElementById('postComment');
+            const newComment = document.createElement('p');
+            newComment.innerText = inputText;
+            commentoSection.appendChild(newComment);
+        })
+
+
+    </script>
+</body>
+</html>
